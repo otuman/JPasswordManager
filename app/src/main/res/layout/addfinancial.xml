@@ -1,0 +1,222 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/background"
+    android:orientation="vertical" >
+  <include
+        android:id="@+id/tool_bar"
+        layout="@layout/tool_bar"
+        />
+ <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+      >
+   <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        >
+   <Spinner
+        android:id="@+id/financialType"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:hint="@string/ftype"
+        android:ems="40"
+        android:layout_marginTop="15dp"
+        android:layout_marginBottom="9dp"
+        android:layout_marginLeft="8dp"
+        />
+
+     <EditText
+         android:id="@+id/financialName"
+         android:layout_width="wrap_content"
+         android:layout_height="wrap_content"
+         android:layout_below="@id/financialType"
+         android:layout_marginBottom="8dp"
+         android:layout_marginLeft="8dp"
+         android:layout_marginTop="8dp"
+         android:ems="40"
+         android:hint="@string/fname"
+         android:inputType="text" >
+
+    </EditText>
+    <EditText
+        android:id="@+id/financialNumber"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_marginBottom="8dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginTop="8dp"
+        android:hint="@string/fnumber"
+        android:layout_below="@id/financialName"
+        android:ems="40"
+        android:inputType="number" />
+   <EditText
+        android:id="@+id/financialVisa"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/financialNumber"
+        android:hint="@string/fvisa"
+        android:layout_marginBottom="8dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginTop="8dp"
+        android:ems="40"
+        android:inputType="number" />
+   <EditText
+        android:id="@+id/financialPin"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/financialVisa"
+        android:layout_marginBottom="8dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginTop="8dp"
+        android:hint="@string/fpassword"
+        android:ems="14"
+        android:inputType="numberPassword" />
+   <ImageButton
+        android:id="@+id/fgpassword"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/financialVisa"
+        android:layout_toEndOf="@id/financialPin"
+        android:layout_toRightOf="@id/financialPin"
+        android:layout_marginTop="10dip"
+        android:layout_marginEnd="10dip"
+        android:layout_marginRight="10dip"
+        android:layout_marginLeft="10dip"
+        android:layout_marginStart="10dip"
+        android:background="?android:attr/selectableItemBackground"
+        android:src="@drawable/passg"
+         />
+    <EditText
+        android:id="@+id/financialPinConfirm"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/financialPin"
+       android:layout_marginBottom="8dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginTop="8dp"
+        android:hint="@string/fpasswordConfirm"
+        android:ems="40"
+        android:inputType="numberPassword" />
+   
+   
+   <TextView
+        android:id="@+id/moreInfo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/financialPinConfirm"
+        android:layout_marginBottom="15dp"
+        android:layout_marginLeft="14dp"
+        android:layout_marginTop="14dp"
+        android:hint="@string/fmoreInfo"
+        />
+     <RadioGroup
+        android:orientation="horizontal"
+        android:id="@+id/radioGroup"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/financialPinConfirm"
+        android:layout_marginBottom="15dp"
+        android:layout_toRightOf="@id/moreInfo"
+        android:layout_toEndOf="@id/moreInfo"
+         >
+     <RadioButton
+        android:id="@+id/moreInfoNo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toRightOf="@id/moreInfo"
+        android:layout_toEndOf="@id/moreInfo"
+        android:layout_marginBottom="15dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginTop="8dp"
+        android:hint="@string/no"
+        android:checked="true"
+        android:onClick="onRadioButtonClicked"/>
+    <RadioButton
+        android:id="@+id/moreInfoYes"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toRightOf="@id/moreInfoNo"
+        android:layout_toEndOf="@id/moreInfoNo"
+        android:layout_marginBottom="15dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginTop="8dp"
+        android:hint="@string/yes"
+        android:onClick="onRadioButtonClicked"/>
+    </RadioGroup>
+    <EditText
+         
+         android:id="@+id/secq1"
+         android:layout_width="wrap_content"
+         android:layout_height="wrap_content"
+         android:layout_below="@id/radioGroup"
+         android:layout_marginBottom="8dp"
+         android:layout_marginLeft="8dp"
+         android:ems="40"
+         android:hint="@string/fsecq1"
+         android:visibility="gone"
+         android:inputType="text"
+         >
+
+    </EditText>
+    <EditText
+        android:id="@+id/ansq1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_marginBottom="8dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginTop="8dp"
+        android:hint="@string/fanswer1"
+        android:layout_below="@id/secq1"
+        android:ems="40"
+        android:visibility="gone"
+        android:inputType="text" />
+   <EditText
+        android:id="@+id/secq2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/ansq1"
+        android:hint="@string/fsecq2"
+        android:layout_marginBottom="8dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginTop="8dp"
+        android:ems="40"
+        android:visibility="gone"
+        android:inputType="text" />
+   <EditText
+        android:id="@+id/ansq2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/secq2"
+        android:layout_marginBottom="8dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginTop="8dp"
+        android:hint="@string/fanswer2"
+        android:ems="40"
+        android:visibility="gone"
+        android:inputType="text" />
+    
+    
+    
+    <Button
+        android:id="@+id/addFinancialButton"
+        android:layout_width="match_parent"
+         android:layout_height="wrap_content"
+        android:text="@string/faddFinancial"
+        android:layout_marginBottom="8dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginTop="4dp"
+        android:layout_marginRight="8dp"
+        android:textAllCaps="false"
+        android:layout_below="@id/ansq2"
+        android:textSize="24sp"
+        android:height="60dp"
+        
+         />
+</RelativeLayout>
+</ScrollView>
+</LinearLayout>

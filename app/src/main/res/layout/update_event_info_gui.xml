@@ -1,0 +1,201 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/background"
+    android:orientation="vertical" >
+
+    <include
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/tool_bar"
+        layout="@layout/tool_bar" />
+
+    
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" >
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical" >
+
+
+            <EditText
+                android:id="@+id/upd_DateCreated"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_alignParentTop="true"
+                android:layout_marginBottom="9dp"
+                android:layout_marginLeft="15dp"
+                android:layout_marginTop="15dp"
+                android:ems="15"
+                android:inputType="text"
+                android:textSize="10dip" />
+            <TextView
+                android:id="@+id/textView0"
+                android:layout_below="@id/upd_DateCreated"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="5dp"
+                android:text="@string/eventtype" />
+            <EditText
+		        android:id="@+id/event_upd_type"
+		        android:layout_width="wrap_content"
+		        android:layout_height="wrap_content"
+		        android:layout_below="@id/textView0"
+		        android:layout_marginBottom="8dp"
+		        android:layout_marginLeft="15dp"
+		        android:layout_marginTop="8dp"
+		        android:ems="20"
+		        android:inputType="text" />
+           <TextView
+                android:id="@+id/textView1"
+                android:layout_below="@id/event_upd_type"
+                android:layout_width="wrap_content"
+                android:layout_marginLeft="5dp"
+                android:layout_height="wrap_content"
+                android:text="@string/eventName" />
+
+            <EditText
+                android:id="@+id/event_upd_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/textView1"
+                android:layout_marginBottom="8dp"
+                android:layout_marginLeft="15dp"
+                android:layout_marginTop="8dp"
+                android:ems="20"
+                android:inputType="text" />
+            <TextView
+                android:id="@+id/textView2"
+                android:layout_below="@id/event_upd_name"
+                android:layout_width="wrap_content"
+                android:layout_marginLeft="5dp"
+                android:layout_height="wrap_content"
+                android:text="@string/eventsingle" />
+            <EditText
+                android:id="@+id/upd_singleEvent"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_below="@id/textView2"
+                android:layout_marginBottom="8dp"
+                android:layout_marginLeft="15dp"
+                android:layout_marginTop="8dp"
+                android:ems="13"
+                android:inputType="text" />
+             <ImageButton
+		        android:id="@+id/eventButton1"
+		        android:layout_width="wrap_content"
+		        android:layout_height="wrap_content"
+		        android:layout_below="@id/textView2"
+		        android:layout_toEndOf="@id/upd_singleEvent"
+		        android:layout_toRightOf="@id/upd_singleEvent"
+		        android:visibility="visible"
+		        android:background="?android:attr/selectableItemBackground"
+		        android:src="@drawable/events" 
+		        />
+               
+            <TextView
+                android:id="@+id/textView3"
+                android:layout_below="@id/upd_singleEvent"
+                android:layout_marginLeft="5dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/eventstart" />
+
+            <EditText
+                android:id="@+id/upd_eventStart"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_below="@id/textView3"
+                android:layout_marginBottom="8dp"
+                android:layout_marginLeft="15dp"
+                android:layout_marginTop="8dp"
+                android:ems="13"
+                android:inputType="text" />
+             <ImageButton
+		        android:id="@+id/eventButton2"
+		        android:layout_width="wrap_content"
+		        android:layout_height="wrap_content"
+		        android:layout_below="@id/textView3"
+		        android:layout_toEndOf="@id/upd_eventStart"
+		        android:layout_toRightOf="@id/upd_eventStart"
+		        android:visibility="visible"
+		        android:background="?android:attr/selectableItemBackground"
+		        android:src="@drawable/events" 
+		        />
+               
+           <TextView
+                android:id="@+id/textView4"
+                android:layout_below="@id/upd_eventStart"
+                android:layout_marginLeft="5dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/eventend" />
+
+            <EditText
+                android:id="@+id/upd_eventEnd"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_below="@id/textView4"
+                android:layout_marginBottom="8dp"
+                android:layout_marginLeft="15dp"
+                android:layout_marginTop="8dp"
+                android:ems="13"
+                android:inputType="text" />
+            <ImageButton
+		        android:id="@+id/eventButton3"
+		        android:layout_width="wrap_content"
+		        android:layout_height="wrap_content"
+		        android:layout_below="@id/textView4"
+		        android:layout_toEndOf="@id/upd_eventEnd"
+		        android:layout_toRightOf="@id/upd_eventEnd"
+		        android:visibility="visible"
+		        android:background="?android:attr/selectableItemBackground"
+		        android:src="@drawable/events" 
+		        />
+               
+            <TextView
+                android:id="@+id/textView5"
+                android:layout_below="@id/upd_eventEnd"
+                android:layout_marginLeft="5dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/eventDiscription" />
+
+            <EditText
+                android:id="@+id/upd_discription"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_below="@id/textView5"
+                android:layout_marginBottom="8dp"
+                android:layout_marginLeft="15dp"
+                android:layout_marginTop="8dp"
+                android:ems="20"
+                android:inputType="text" />
+
+            <Button
+                android:id="@+id/upd_button"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/upd_discription"
+                android:layout_marginBottom="8dp"
+                android:layout_marginLeft="8dp"
+                android:layout_marginTop="8dp"
+                android:ems="20"
+                android:text="@string/update"
+                android:inputType="text"
+                android:textSize="24sp"
+                android:height="60dp"
+               android:layout_centerHorizontal="true"/>
+        </RelativeLayout>
+    </ScrollView>
+
+</LinearLayout>

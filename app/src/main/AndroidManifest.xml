@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.jerotoma.jpasswordmanager"
+    >
+    <application
+        android:name=".PasswordManagerApplication"
+        android:allowBackup="true"
+        android:icon="@drawable/ic_launcher"
+        android:label="@string/app_name"
+        android:theme="@style/AppTheme"
+        android:supportsRtl="true"
+        android:fullBackupContent="@xml/jerotoma_auto_backup">
+        <activity
+            android:name=".LoginMainActivity"
+            android:label="@string/app_name" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <meta-data
+            android:name="android.app.default_searchable"
+            android:value="jerotoma.jpasswordmanager.SearchInfo" />
+        <activity
+            android:label="@string/app_name"
+            android:launchMode="singleTop"
+            android:name=".SearchInfo" >
+            <intent-filter >
+                <action android:name="android.intent.action.SEARCH" />
+            </intent-filter>
+            <intent-filter >
+                <action android:name="android.intent.action.VIEW" />
+            </intent-filter>
+            <meta-data
+                android:name="android.app.searchable"
+                android:resource="@layout/searchable" />
+        </activity>
+        <activity
+            android:name=".app.SettingActivity"
+            android:label="@string/app_name"
+            />
+        <activity
+            android:name=".app.AddAccountInfo"
+            android:label="@string/new_account"
+            />
+
+        <activity
+            android:name=".app.AccountInfoDisplay"
+            android:label="@string/account_info"
+            />
+
+        <activity
+            android:name=".app.UpdateAccountInfoActivity"
+            android:label="@string/account_info"
+            />
+
+        <activity
+            android:name=".app.RegisterNewUser"
+            android:label="@string/account_info"
+            />
+
+        <activity
+            android:name=".app.ResetNewUserInfo"
+            android:label="@string/resetlogin"
+            />
+        <activity
+            android:name=".app.AboutPassManager"
+            android:label="@string/app_name"
+            />
+        <activity
+            android:name=".app.HelpActivity"
+            android:label="@string/app_name"
+            />
+
+        <activity
+            android:name=".MainTabbedActivity"
+            android:label="@string/app_name"
+            />
+         <activity
+            android:name=".app.PasswordGenerator"
+            android:label="@string/account_info"
+            />
+
+        <activity
+            android:name=".confidencials.FinancialInfoGui"
+            android:label="@string/fInfo"
+
+            />
+        <activity
+            android:name=".confidencials.EventInfoGuiActivity"
+            android:label="@string/eInfo"
+
+            />
+        <activity
+            android:name=".confidencials.EventInfoDisplay"
+            android:label="@string/eInfo"
+
+            />
+        <activity
+            android:name=".confidencials.FinancialInfoDisplay"
+            android:label="@string/fInfo"
+
+            />
+        <activity
+            android:name=".update.UpdateEventInfoGui"
+            android:label="@string/eInfo"
+
+            />
+        <activity
+            android:name=".update.UpdateFinancialInfoGui"
+            android:label="@string/fInfo"
+
+            />
+    </application>
+
+</manifest>

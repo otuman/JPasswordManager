@@ -1,0 +1,145 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/background"
+    android:orientation="vertical" >
+    <include
+        android:id="@+id/tool_bar"
+        layout="@layout/tool_bar"
+        />
+ <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+      >
+   <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        >
+  <EditText
+        android:id="@+id/disp_DateCreated"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentRight="true"
+        android:ems="15"
+        android:textSize="10dip"
+        android:focusable="false"
+        android:layout_marginTop="15dp"
+        android:layout_marginBottom="9dp"
+        android:layout_marginLeft="8dp"
+        android:inputType="text"
+        />
+   <EditText
+        android:id="@+id/disp_financialType"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/disp_DateCreated"
+        android:ems="20"
+        android:focusable="false"
+        android:layout_marginTop="15dp"
+        android:layout_marginBottom="9dp"
+        android:layout_marginLeft="8dp"
+        android:inputType="text"
+        />
+  <EditText
+         android:id="@+id/disp_financialName"
+         android:layout_width="wrap_content"
+         android:layout_height="wrap_content"
+         android:layout_marginBottom="8dp"
+         android:layout_marginLeft="8dp"
+         android:layout_marginTop="8dp"
+          android:layout_below="@id/disp_financialType"
+         android:ems="20"
+         android:focusable="false"
+         android:inputType="text" >
+
+    </EditText>
+    <EditText
+        android:id="@+id/disp_financialNumber"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_marginBottom="8dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginTop="8dp"
+        android:focusable="false"
+        android:layout_below="@id/disp_financialName"
+        android:ems="20"
+        android:inputType="text" />
+   <EditText
+        android:id="@+id/disp_financialVisa"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/disp_financialNumber"
+        android:layout_marginBottom="8dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginTop="8dp"
+        android:focusable="false"
+        android:ems="20"
+        android:inputType="text" />
+   <EditText
+        android:id="@+id/disp_financialPin"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/disp_financialVisa"
+       android:layout_marginBottom="8dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginTop="8dp"
+        android:focusable="false"
+        android:ems="20"
+        android:inputType="text" />
+    
+   <EditText
+         
+         android:id="@+id/disp_secq1"
+         android:layout_width="wrap_content"
+         android:layout_height="wrap_content"
+         android:layout_below="@id/disp_financialPin"
+         android:layout_marginBottom="8dp"
+         android:layout_marginLeft="8dp"
+         android:ems="20"
+         android:focusable="false"
+         android:inputType="text"
+         >
+
+    </EditText>
+    <EditText
+        android:id="@+id/disp_ansq1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_marginBottom="8dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginTop="8dp"
+         android:layout_below="@id/disp_secq1"
+        android:ems="20"
+        android:focusable="false"
+        android:inputType="text" />
+   <EditText
+        android:id="@+id/disp_secq2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/disp_ansq1"
+        android:layout_marginBottom="8dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginTop="8dp"
+        android:ems="20"
+        android:focusable="false"
+        android:inputType="text" />
+   <EditText
+        android:id="@+id/disp_ansq2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/disp_secq2"
+       android:layout_marginBottom="8dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginTop="8dp"
+        android:focusable="false"
+        android:ems="20"
+        android:inputType="text" />
+   </RelativeLayout>
+</ScrollView>
+    
+</LinearLayout>

@@ -1,0 +1,122 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/background"
+    tools:context="com.jerotoma.jpasswordmanager.LoginMainActivity" >
+
+
+    <include
+        android:id="@+id/tool_bar"
+        layout="@layout/tool_bar" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"> 
+<RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+      <TextView
+        android:id="@+id/login_title"
+        android:layout_marginStart="10dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingTop="80dip" 
+        android:layout_gravity="start"
+        android:text="@string/login_here"
+        android:textColor="#890000"
+        android:textSize="34sp"
+        android:textStyle="bold"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentStart="true" />
+   
+     <EditText
+        android:id="@+id/usernamei"
+        android:paddingTop="20dip" 
+        android:layout_below="@id/login_title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:inputType="text"
+        android:hint="@string/username"
+        android:layout_marginLeft="20dip"
+        android:layout_marginRight="20dip"
+	        
+        />
+      <EditText
+         android:id="@+id/passwordi"
+         android:paddingTop="20dip" 
+         android:layout_below="@id/usernamei"
+         android:layout_width="match_parent"
+         android:layout_height="wrap_content"
+         android:layout_marginLeft="20dip"
+         android:layout_marginRight="20dip"
+         android:hint="@string/password"
+         android:inputType="textPassword"
+        />
+
+      <CheckBox
+          android:id="@+id/show_username"
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:layout_below="@id/passwordi"
+          android:layout_marginLeft="20dip"
+          android:layout_marginRight="20dip"
+          android:checked="false"
+          android:clickable="true"
+          android:layout_marginTop="15dip"
+          android:text="@string/chbox" />
+
+       <Button
+           android:id="@+id/login_button"
+           android:layout_width="match_parent"
+           android:layout_height="wrap_content"
+           android:layout_below="@id/show_username"
+           android:layout_gravity="center"
+           android:layout_marginLeft="20dip"
+           android:layout_marginRight="20dip"
+           android:layout_marginTop="15dip"
+           android:clickable="true"
+           android:textAllCaps="false"
+           android:textSize="24sp"
+           android:height="60dp"
+           android:text="@string/login" />
+
+       <Button
+           android:id="@+id/newUser"
+           android:layout_width="wrap_content"
+           android:layout_height="wrap_content"
+           android:layout_marginEnd="20dip"
+           android:layout_marginRight="20dip"
+           android:layout_alignParentBottom="true"
+           android:layout_below="@id/login_button"
+           android:layout_marginTop="60dip"
+           android:layout_alignParentRight="true"
+           android:visibility="visible"
+           android:text="@string/new_user"
+           android:clickable="true"
+           android:autoLink="all"
+           style="?android:attr/borderlessButtonStyle"
+           android:textAppearance="?android:attr/textAppearanceSmall" />
+
+    <Button
+        android:id="@+id/reset"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="20dp"
+        android:layout_marginRight="20dp"
+        android:text="@string/reset"
+        android:clickable="true"
+        android:autoLink="all"
+        android:visibility="invisible"
+        style="?android:attr/borderlessButtonStyle"
+        android:textAppearance="?android:attr/textAppearanceSmall"
+        android:layout_alignParentBottom="true"
+        android:layout_alignRight="@+id/newUser"
+        android:layout_alignEnd="@+id/newUser" />
+</RelativeLayout>
+</ScrollView>
+</LinearLayout>
+
+

@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"  
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    
+     <item android:id="@+id/search"
+        android:title="@string/search_title"
+        android:orderInCategory="1"
+        android:icon="@drawable/ic_search"
+        app:showAsAction="always"
+        app:actionViewClass="android.widget.SearchView" 
+        />
+    
+    <item
+        android:id="@+id/generatepass"
+        android:orderInCategory="2"
+        android:title="@string/pg"
+        android:icon="@drawable/passg"
+        app:showAsAction="always"
+       /> 
+   <item
+        android:id="@+id/financial"
+        android:orderInCategory="2"
+        android:title="@string/new_financial"
+        android:showAsAction="never"
+       /> 
+ <item
+        android:id="@+id/help"
+        android:orderInCategory="3"
+        android:title="@string/help"
+        android:showAsAction="never"/>
+   
+     <item
+        android:id="@+id/aboutb"
+        android:orderInCategory="100"
+        android:title="@string/about"
+        android:showAsAction="never"/>
+</menu>
