@@ -20,7 +20,9 @@ public class AboutPassManager extends AccountManagerActivity {
 		toolbar = (Toolbar) findViewById(R.id.tool_bar);
 		setSupportActionBar(toolbar);
         toolbar.setNavigationIcon(R.drawable.ic_launcher);
-        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+		if(getSupportActionBar() != null){
+		  getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+		}
 		setUpView();
 	}
 

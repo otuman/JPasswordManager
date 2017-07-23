@@ -30,10 +30,10 @@ public class UpdateAccountInfoActivity extends AccountManagerActivity {
 	String acc_ID ="";
 	private EditText AccountName;
 	private EditText Username;
-	private EditText Password;
+	private EditText password1;
 	private EditText EmailAddress;
 	private EditText Phone_number;
-	private CheckBox Show_pass;
+	private CheckBox show_pass;
 	private Button saveChanges;
 	private String dateCreated;
 	private String account_name = "";
@@ -50,7 +50,9 @@ public class UpdateAccountInfoActivity extends AccountManagerActivity {
 		toolbar = (Toolbar) findViewById(R.id.tool_bar);
 		setSupportActionBar(toolbar);
         toolbar.setNavigationIcon(R.drawable.ic_launcher);
-        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+		if(getSupportActionBar() != null){
+			getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+		}
 		
 		 setUpView();
 		 	
@@ -67,31 +69,30 @@ public class UpdateAccountInfoActivity extends AccountManagerActivity {
 			 phone = intent.getStringExtra(KEY_PHONE);
 			 acc_ID = intent.getStringExtra(KEY_ID);
 			 dateCreated = intent.getStringExtra(KEY_DATE);
-			}
-		
+		}
 		AccountName      = (EditText)findViewById(R.id.updateaccount_name);
 		AccountName.setText(account_name);
 		Username         = (EditText)findViewById(R.id.updateusername); 
 		Username.setText(username);
-		Password         = (EditText)findViewById(R.id.updatepassword);
-		Password.setText(password);
+		password1 = (EditText)findViewById(R.id.updatepassword);
+		password1.setText(password);
 		EmailAddress     = (EditText)findViewById(R.id.updateemail_address);
 		EmailAddress.setText(email);
 		Phone_number     = (EditText)findViewById(R.id.updatephone_number);
 		Phone_number.setText(phone);
-		Show_pass        = (CheckBox)findViewById(R.id.updateshow_pass);
+		show_pass = (CheckBox)findViewById(R.id.updateshow_pass);
 		
-		Show_pass.setOnCheckedChangeListener(new OnCheckedChangeListener(){
+		show_pass.setOnCheckedChangeListener(new OnCheckedChangeListener(){
 		
 		@Override
 		public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
 				if(!isChecked){
 					//show password
-					Password.setTransformationMethod(PasswordTransformationMethod.getInstance());
+					password1.setTransformationMethod(PasswordTransformationMethod.getInstance());
 					}
 				else{
 					//hide password
-					Password.setTransformationMethod(HideReturnsTransformationMethod.getInstance());
+					password1.setTransformationMethod(HideReturnsTransformationMethod.getInstance());
 				}
 				
 			}});
@@ -102,7 +103,7 @@ public class UpdateAccountInfoActivity extends AccountManagerActivity {
 	    	long ID = 0;
 	 		String AccName = AccountName.getText().toString();
 			String user    = Username.getText().toString();
-			String pass    = Password.getText().toString();
+			String pass    = password1.getText().toString();
 			String email1   = EmailAddress.getText().toString();
 			String phone1   = Phone_number.getText().toString();
 			String date    = dateCreated;
